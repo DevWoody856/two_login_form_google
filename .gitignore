@@ -151,8 +151,8 @@ blog_main3/settings/dev.py
 blog_main3/old_settings.py
 
 # docker file
-Dockerfile
-Dockerfile.prod
-docker-compose.yaml
-docker-compose.prod.yaml
-entrypoint.sh
+#Dockerfile
+#Dockerfile.prod
+#docker-compose.yaml
+#docker-compose.prod.yaml
+#entrypoint.sh

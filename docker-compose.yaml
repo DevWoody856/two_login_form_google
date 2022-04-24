@@ -1,0 +1,26 @@
+version: "3.9"
+services:
+  backend:
+    container_name: twologin_8_220424
+    build: .
+    volumes:
+      - .:/twologin_8_220424
+    ports:
+      - 8022:8022
+    depends_on:
+      - db_twologin_8_220424
+
+  db_twologin_8_220424:
+    container_name: db_twologin_8_220424
+    image: postgres
+    restart: always
+    volumes:
+      - .dbdata:/var/lib/db_twologin_8_220424
+    ports:
+      - 5455:5432
+
+    environment:
+      - POSTGRES_DB=${POSTGRES_DB}
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+
