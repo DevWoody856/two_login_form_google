@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block contents %}
+    {% if messages %}
+    <div>
+      <strong>Messages:</strong>
+      <ul>
+        {% for message in messages %}
+        <li>{{message}}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+
+    {% if user.is_authenticated %}
+        <p>Welcome, {{ user.email }}</p>
+        <p>{{ text }}</p>
+    {% else %}
+        <p>Welcome Friend, please log in</p>
+    {% endif %}
+
+  {% if user.is_authenticated %}
+        <a href="javascript:{document.getElementById('logout').submit()}">Logout</a>
+        <form action="{% url 'two_app:account_logout' %}" id="logout" method="POST">
+            {% csrf_token %}
+            <input type="hidden">
+        </form>
+    {% else %}
+        <h2>Not login</h2>
+    {% endif %}
+{% endblock %}

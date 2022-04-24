@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block contents %}
+    <div class="container text-dark mt-5">
+        <div class="row justify-content-md-center">
+            <h1>Create two entrances using Allauth and Google login Project</h1>
+            <div>
+                {% if messages %}
+                    <div class="alert alert-primary" role="alert">
+                    <strong>Messages:</strong>
+                        {{ message }}
+                        {% for message in messages %}
+                            <li>{{message}}</li>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+
+            <div class="card" style="width: 18rem;">
+                <a href="{% url 'two_app:shop-signup' %}">
+                  <div class="card-body">
+                        <h5 class="card-title">For Shop</h5>
+                  </div>
+                </a>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <a href="{% url 'two_app:customer-signUp' %}">
+                  <div class="card-body">
+                        <h5 class="card-title">For Customer</h5>
+                  </div>
+                </a>
+            </div>
+            {% if user.is_authenticated %}
+                <p>Welcome, {{ user.email }}</p>
+            {% else %}
+                <p>Welcome Friend, please log in</p>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}
