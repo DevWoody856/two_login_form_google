@@ -146,10 +146,6 @@ static/admin
 static/markdownx
 
 
-#settings
-blog_main3/settings/dev.py
-blog_main3/old_settings.py
-
 # docker file
 #Dockerfile
 #Dockerfile.prod
