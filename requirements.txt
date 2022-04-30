@@ -1,6 +1,4 @@
 Django
-# django-crispy-forms
-# pytz
 psycopg2-binary
 psycopg2
 django-environ

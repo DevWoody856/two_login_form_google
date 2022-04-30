@@ -1,0 +1,242 @@
+/******************
+Header section
+*******************/
+
+.header{
+    width: 100vw;
+    height:5rem;
+    border-bottom: 0.3rem solid;
+
+    display: flex;
+    justify-content: center;
+}
+
+.header__contents{
+    width:80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.header__link{
+    width: 20%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.header__link:hover{
+    background-color: var(--main-color);
+    color:var(--main-bg-color);
+}
+
+/******************
+main section
+*******************/
+
+.main{
+    width: 100vw;
+    margin: 4rem 0;
+
+    display: grid;
+    grid-auto-columns:80%;
+    justify-content: center;
+    grid-gap: 1rem;
+}
+
+/******************
+Login section
+*******************/
+
+.login{
+    width: auto;
+    height: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+    align-items: center
+}
+
+@media only screen and (max-width: 767px) {
+    /* phones */
+    .login {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 2rem;
+        align-items: center
+    }
+}
+
+.login__card{
+    width: auto;
+    height: 10rem;
+    border: 0.3rem solid;
+    border-radius: 1rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login__card a{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login__card:hover,
+.login__card:hover *{
+    background-color: var(--main-color);
+    color: var(--main-bg-color);
+    border-radius: 1rem;
+}
+
+/******************
+signin section
+*******************/
+
+.signin{
+    width: 100vw;
+    margin: 4rem 0;
+
+    display: grid;
+    grid-auto-columns:80%;
+    justify-content: center;
+    grid-gap: 1rem;
+}
+
+.signin__form{
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 1rem;
+}
+
+.signin__form__button{
+    width: 100%;
+    height: 10rem;
+    border: 0.3rem solid;
+    border-radius: 1rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signin__form__button:hover{
+    background-color: var(--main-color);
+    color: var(--main-bg-color);
+    border-radius: 1rem;
+}
+
+/******************
+signup section
+*******************/
+
+.authsignup{
+    width: 100vw;
+    margin: 4rem 0;
+
+    display: grid;
+    grid-auto-columns:80%;
+    justify-content: center;
+    grid-gap: 1rem;
+}
+
+.authsignup__button{
+    width: 25%;
+    height: 4rem;
+    border: 0.3rem solid;
+    border-radius: 1rem;
+
+    background-color: var(--main-bg-color);
+    color: var(--main-color);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.authsignup__button:hover{
+    background-color: var(--main-color);
+    color: var(--main-bg-color);
+    border-radius: 1rem;
+}
+
+.authsignup__email input{
+    width: auto;
+    height:3rem;
+    padding:0.5rem;
+
+    border: 0.1rem solid;
+    border-radius: 1rem;
+
+    background-color: var(--main-bg-color);
+    color: var(--main-color);
+}
+
+.authsignup__email input:focus{
+    border: 0.2rem solid;
+    outline: none;
+}
+
+/******************
+Profile section
+*******************/
+
+.profile{
+    width: 100vw;
+    margin: 4rem 0;
+
+    display: grid;
+    grid-auto-columns:80%;
+    justify-content: center;
+    grid-gap: 1rem;
+}
+
+.profile__logout{
+    width: 25%;
+    height: 4rem;
+    border: 0.3rem solid;
+    border-radius: 1rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile__logout a{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile__logout:hover,
+.profile__logout:hover *{
+    background-color: var(--main-color);
+    color: var(--main-bg-color);
+    border-radius: 1rem;
+}
+
+/******************
+Social login Failure
+*******************/
+
+.failure{
+    width: 100vw;
+    margin: 4rem 0;
+
+    display: grid;
+    grid-auto-columns:80%;
+    justify-content: center;
+    grid-gap: 1rem;
+}

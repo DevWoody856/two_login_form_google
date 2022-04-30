@@ -1,17 +1,15 @@
 {% extends 'base.html' %}
 {% load socialaccount %}
-    {% block contents %}
+{% block contents %}
 
-    <div class="container text-dark mt-5">
-        <div class="row justify-content-md-center">
-          <div class="col-md-5 bg-grey p-3">
-            <form class="form-signin">
-                <h1 class="h3 mb-3">Shop Sign-in</h1>
-                <a href="{% provider_login_url 'google' action="reauthenticate" user="shop" %}" class="btn btn btn-danger btn-lg btn-block" role="button" aria-pressed="true">Sign in with Google</a>
-              </form>
-          </div>
-        </div>
-      </div>
-        <div>{{ user_e }}</div>
+    <div class="signin">
+        <form class="signin__form">
+            <h1 class="signin__form__title">Shop Sign-in</h1>
+            <a class="signin__form__button" href="{% provider_login_url 'google' action='reauthenticate' user='shop' %}">
+                <h2>Sign in with Google</h2>
+            </a>
+        </form>
+    </div>
+    <div>{{ user_e }}</div>
 
-   {% endblock %}
+{% endblock %}

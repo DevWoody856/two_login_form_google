@@ -1,0 +1,36 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+
+:root{
+    --main-font-family:'Roboto Condensed', sans-serif;
+    --main-bg-color:#262626;
+    --main-color:#1FC742;
+}
+
+
+body{
+    position: absolute;
+    max-width: 100%;
+    top: 0;
+    bottom: 0;
+    overflow-x: hidden;
+
+    font-family: var(--main-font-family);
+    background-color: var(--main-bg-color);
+    color: var(--main-color);
+    border-color:var(--main-color);
+    line-height: 1.5;
+}
+
+a, u {
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+h1{
+    font-size: 3rem;
+    line-height: 4rem;
+}

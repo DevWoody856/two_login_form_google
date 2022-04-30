@@ -14,7 +14,10 @@ def state_from_request(cls, request):
     state = {}
     next_url = get_next_redirect_url(request)
     # # add this statement is important. We get the query parameter we added to the template and store it here as a  session value.
-    request.session["user_type"] = get_request_param(request, "user", None)
+    try:
+        request.session["user_type"] = get_request_param(request, "user", None)
+    except KeyError:
+        print('user_type not exist')
 
     if next_url:
         state["next"] = next_url
