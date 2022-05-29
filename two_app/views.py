@@ -33,6 +33,7 @@ def shopProfile(request, username):
     if Shop.objects.filter(user__username=request.user.username).exists():
         text = Shop.objects.filter(user__username=username).values_list('description', flat=True).get()
     else:
+        # Create new shop user here
         text = Shop.objects.create(user=user, description="First Comment")
         text = text.description
     context = {
@@ -56,6 +57,7 @@ def customerProfile(request, username):
     if Customer.objects.filter(user__username=username).exists():
         text = Customer.objects.filter(user__username=username).values_list('description', flat=True).get()
     else:
+        # Create new customer user here
         text = Customer.objects.create(user=user, description="First Comment")
         text = text.description
 

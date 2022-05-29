@@ -1,5 +1,4 @@
 Django
 psycopg2-binary
-psycopg2
 django-environ
 django-allauth==0.44.0

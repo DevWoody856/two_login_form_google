@@ -18,7 +18,6 @@ class SocialAccountAdapter(DefaultSocialAccountAdapter):
             pass
 
         if request.session["user_type"] == "customer":
-            print("sassss")
             if Shop.objects.filter(user__email=user).exists():
                 raise ImmediateHttpResponse(
                     HttpResponse('You already have a Shop account. You cannot signin using Customer Account'))
@@ -57,10 +56,10 @@ class AccountAdapter(DefaultAccountAdapter):
             path = '/accounts/shop/{username}/'
             return path.format(username=request.user.username)
 
-
         elif request.session["user_type"] == "customer":
             path = '/accounts/customer/{username}/'
             return path.format(username=request.user.username)
+
 
         else:
             return HttpResponse('This is an error related to session.')
